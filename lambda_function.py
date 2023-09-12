@@ -42,12 +42,16 @@ def lambda_handler(event, context):
                     if line_count == 1:
                         pass
                     else:      
-                        SQL_command = "INSERT INTO dev.public.bank VALUES ("+row[0]+",'"+row[1]+"',"+row[5]+",'"+timestamp+"');"
+                        SQL_command = "INSERT INTO banktest.bank VALUES ("+row[0]+",'"+row[1]+"',"+row[5]+",'"+timestamp+"');"
                         with connection.cursor() as cursor:    
                             cursor.execute(SQL_command)
         
-            connection.commit()
-        connection.close()
+                        connection.commit()
+            
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Succesfully')
+        }
             
         return {
             'statusCode': 200,

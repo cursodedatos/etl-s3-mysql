@@ -50,12 +50,7 @@ def lambda_handler(event, context):
             
         return {
             'statusCode': 200,
-            'body': json.dumps('Succesfully')
-        }
-            
-        return {
-            'statusCode': 200,
-            'body': json.dumps('Succesfully')
+            'body': json.dumps('ETL Succesfully run')
         }
 
     except ValueError as e:

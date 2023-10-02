@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     try:
         #Extract from S3
         
-        bucket_name = 'curso-datos-bank'
+        bucket_name = 'curso-name'
         file_name = 'bank.csv'
         dir_file = '/tmp/' + file_name
         s3 = boto3.resource('s3')
@@ -27,7 +27,7 @@ def lambda_handler(event, context):
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S" )
         line_count = 0
   
-        connection = pymysql.connect(host='cursoudla.cxcuailuhghk.us-east-1.rds.amazonaws.com',
+        connection = pymysql.connect(host='xxxx.xxxx.us-east-1.rds.amazonaws.com',
                         user='admin',
                         password='pass',
                         database='database')

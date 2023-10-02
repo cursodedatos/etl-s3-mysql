@@ -29,8 +29,8 @@ def lambda_handler(event, context):
   
         connection = pymysql.connect(host='cursoudla.cxcuailuhghk.us-east-1.rds.amazonaws.com',
                         user='admin',
-                        password='uBSM8pfZuBgpSZcxZvJe',
-                        database='banktest')
+                        password='pass',
+                        database='database')
         
         with open(dir_file, mode='r') as csv_file:
             data_csv = csv.reader(csv_file,delimiter=';')

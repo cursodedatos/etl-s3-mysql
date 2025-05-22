@@ -98,4 +98,4 @@ def insert_into_aurora(data):
                 batch = data[i:i + BATCH_SIZE]
                 cursor.executemany(insert_query, batch)
                 connection.commit()
-                logger.info("Batch insertado: filas %d a %d", i + 1, i + len(batch)
+                logger.info("Batch insertado: filas %d a %d", i + 1, i + len(batch))
